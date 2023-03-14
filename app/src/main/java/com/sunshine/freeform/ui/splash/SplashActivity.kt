@@ -21,7 +21,7 @@ import com.sunshine.freeform.ui.main.MainActivity
 import com.sunshine.freeform.ui.permission.PermissionActivity
 import com.sunshine.freeform.utils.PermissionUtils
 import com.sunshine.freeform.utils.ServiceUtils
-import com.tencent.bugly.crashreport.CrashReport
+// import com.tencent.bugly.crashreport.CrashReport
 import kotlinx.coroutines.*
 import rikka.shizuku.ShizukuBinderWrapper
 import rikka.shizuku.ShizukuSystemProperties
@@ -47,7 +47,7 @@ class SplashActivity : AppCompatActivity() {
                 .setPositiveButton(getString(R.string.agree)) {_, _ ->
                     viewModel.putIntSp("version_privacy", MiFreeform.VERSION_PRIVACY)
 
-                    CrashReport.initCrashReport(applicationContext)
+                    // CrashReport.initCrashReport(applicationContext)
 
                     toCheckPermission()
                 }

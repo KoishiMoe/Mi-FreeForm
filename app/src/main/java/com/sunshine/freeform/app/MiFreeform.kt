@@ -12,7 +12,7 @@ import com.google.android.material.color.DynamicColors
 import com.sunshine.freeform.BuildConfig
 import com.sunshine.freeform.IControlService
 import com.sunshine.freeform.service.ControlService
-import com.tencent.bugly.crashreport.CrashReport
+// import com.tencent.bugly.crashreport.CrashReport
 import org.lsposed.hiddenapibypass.HiddenApiBypass
 import rikka.shizuku.Shizuku
 import rikka.sui.Sui
@@ -97,10 +97,10 @@ class MiFreeform : Application() {
         Shizuku.addRequestPermissionResultListener(onRequestPermissionResultListener)
         Shizuku.addBinderDeadListener(binderDeadListener)
 
-        val sp = getSharedPreferences(MiFreeform.APP_SETTINGS_NAME, Context.MODE_PRIVATE)
-        if (sp.getInt("version_privacy", -1) >= VERSION_PRIVACY) {
-            CrashReport.initCrashReport(applicationContext)
-        }
+        // val sp = getSharedPreferences(MiFreeform.APP_SETTINGS_NAME, Context.MODE_PRIVATE)
+        // if (sp.getInt("version_privacy", -1) >= VERSION_PRIVACY) {
+        //     CrashReport.initCrashReport(applicationContext)
+        // }
     }
 
     override fun attachBaseContext(base: Context?) {
